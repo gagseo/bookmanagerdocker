@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Notice">
+	<insert id="insertNotice">
+		insert into tb_notice 
+		(nidx,NOTICETITLE,WRITER,CONTENT)
+		values 
+		(S_NOTICE_IDX.nextval,#{noticeTitle}, #{noticeWriter}, #{noticeContent})
+	</insert>
+	
+	<insert id="insertFile">
+		insert into tb_file 
+		(f_idx,noticeno,originFileName,renameFileName,savePath)
+		values
+		(
+			S_TB_FILE_IDX.NEXTVAL
+			,S_NOTICE_IDX.currval	
+			,#{originFileName}
+			,#{renameFileName}
+			,#{savePath}
+		)
+	</insert>
+	
+	<resultMap type="map" id="fileData">
+		<result column="originFileName" property="originFileName"/>
+		<result column="renameFileName" property="renameFileName"/>
+	</resultMap>
+	
+	<select id="selectFile" resultMap="fileData">
+		select 
+		originFileName, renameFileName 
+		from tb_file
+		where NOTICENO = #{noticeNo}
+	</select>
+</mapper>
+
+

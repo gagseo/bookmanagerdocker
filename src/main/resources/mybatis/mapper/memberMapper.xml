@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="MEMBER">
+  <insert id="insertMember">
+    insert into tb_member
+    (USERID,PASSWORD,TELL) 
+    values(
+    #{userId},#{userPwd},#{m_email},#{m_tell})
+  </insert>
+  
+  <select id="selectId" resultType="string">
+    select USERID from tb_member where USERID
+	 = #{id}
+  </select>
+  
+  <select id="selectMember" resultType="com.spring.springBM.member.model.vo.Member">
+  		select 
+  			m.USERID
+			, c.INFO
+			, m.TELL
+			, m.REGDATE
+			, m.RENTABLEDATE
+	    from tb_member m 
+	    inner join tb_code c on m.GRADE = c.CODE
+		where m.USERID= #{id} and m.PASSWORD= #{pw} 
+  </select>
+  
+</mapper>
+
+

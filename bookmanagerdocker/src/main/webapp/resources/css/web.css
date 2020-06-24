@@ -1,0 +1,328 @@
+	.content{
+		height:100%;
+		width:100%;		
+	}
+
+	.middle{
+		width : 100%;
+		padding-top:52%;
+		background-image : url('../image/main_banner_02.jpg');
+		background-repeat: no-repeat;
+		background-size:contain;
+		background-position: center;
+	}
+	
+	.site-title-wrapper{
+		position:absolute;		
+		width:60%;
+		padding-top:25%;		
+		float:left;			
+		left: 20%;	
+		top:20%;		
+	}
+	
+	.site-main{
+		position:absolute;		
+		width:100%;
+		height:100%;		
+		background-color: rgba( 255, 255, 255, 0.5);
+		float:left;		
+		top:0%;		
+	}
+
+	.site-title{
+		height:30%;
+		font-size : 5vw;	
+		transform: translateY(100%);
+	}
+	
+	.site-search{
+		width:100%;
+		height:12%;	
+		transform: translateY(300%);	
+		background-color:white ;
+		overflow:hidden;		
+	}
+	
+	.site-search input[type=text]{
+		height:100%;
+		width: 70%;	
+		float:left;
+		margin-left:1%;
+		font-size:1.5vw;	
+	}
+
+	.btn-search{	
+		width:20%;
+		height:100%;
+		float:left;	
+		font-size:1.5vw;	
+		background-color:red;	
+		color:white;
+	}
+
+	.btn-search p{
+		height:70%;
+		transform: translateY(22%);
+		font-weight: bold;
+	}
+	
+	.icon-search{
+		width:5%;
+		height:50%;
+		font-size:2vw;
+		transform: translateY(40%);
+		float:left;
+	}
+	
+	.icon-search i{
+		height:50%;
+	}
+
+	.planshop{
+		color: white;		
+		width: 100%;
+		transform:translateY(-150%);
+	}
+
+	.planshop-menu{
+		width:100%;
+		height:100%;			
+	}
+
+	.planshop-menu div{
+		width: 20%;
+		margin-left:2%;
+		height: 100%;
+		display:inline-block;
+	}
+	
+	.planshop-menu i{
+		font-size:10vmin;
+	}
+	
+	.planshop-menu p{
+		font-weight: bold;
+		margin-top:5%;
+	}
+
+	.book{
+		height:auto;
+		width:80%;
+		margin:0 auto;	
+		transform: translateY(-3%);
+	}
+
+	.book-wrapper{
+		width:100%;			
+		padding-top:120%; 
+	}
+	
+	.book-box{
+		position:absolute;
+		height:100%;
+		width:100%;	
+		top: 0;
+		left: 0;	
+	}
+	
+	.book-box-title{
+		width : 84%;
+		height : 2.5%;
+		left:8%;
+		font-size:1.5vw;
+		text-align:left;
+		color:black;
+	}
+	
+	.book-line{
+		overflow: hidden;	
+		height:20%;
+		margin-top:1%;
+		margin-bottom:1%;
+	}
+	.book-item{		
+		float:left;
+		width:10%;
+		height:80%;
+		margin-left:8%;	
+	}
+
+	.book-img{
+		height:80%;
+		width:100%;
+	}
+	
+	.book-img img{
+		max-width:100%;
+		min-width:100%;
+		max-height:100%;
+		min-height:100%;
+		box-shadow: 2px 2px 5px black;
+	} 
+	
+	.book-title{
+		margin-top:10%;
+		font-size:1vw;
+		height:20%;
+	}
+
+	.bottom{
+		background-color: lightgrey;
+		color: white;
+		height:25%;
+	}
+	
+	/* board  */
+	.Menu{
+		overflow: hidden;		
+		color: white;		
+		width: 100%;
+		padding-bottom:10%;
+		margin-top:4%;
+	}
+
+	.MenuBox{
+		position:absolute;
+		background-color:lightblue;
+		width:80%;
+		height:100%;
+		left:12.5%;
+	}
+	
+	.notice{
+		
+		text-align: left;
+		width:75%;
+		height:10%;
+		left:15%;
+		border-bottom:2px solid;
+	}
+	
+	.notice h2{
+		
+		top:50%;
+		transform:translateY(-50%);
+		height:40%;
+	}
+	
+	.search-box{
+		width:75%;
+		left:15%;
+		height:60%;
+	}
+	
+	.noticelist{
+		width:100%;
+	}
+	
+	.noticelist th{
+		 font-size: 1.5vw;
+		 background-color: grey;
+		 color:white;
+	}
+	
+	.noticelist td{
+		  border-bottom: 1px solid lightgrey;
+	}
+	
+	.paging{
+		height:10%;
+		font-size:1.5vw;
+	}
+	
+	.notice-detail{
+		text-align: left;
+		width:75%;
+		height:50%;
+		left:15%;
+	}
+	
+	.notice-title{
+		width:100%;
+		height:15%;
+		text-align: left;
+		font-size:1.5vw;
+		padding:1% 0 1% 0;
+		border-bottom:2px solid;
+	}
+	
+	.info{
+		width:100%;
+		height:10%;
+		
+		float:left;
+		text-align: left;
+		border-bottom:1px solid;
+	}
+	
+	.info span{
+		width:25%;
+		height:50%;
+		float:left;
+		transform:translateY(50%);
+	}
+	
+	.more{
+		width:50%;
+		height:10%;
+		
+		float:right;
+		text-align: right;
+	}
+	
+	.text{
+		text-align: left;
+		height:65%;
+		width:100%;
+		margin-top:5%;
+		border-bottom:1px solid;
+	}
+
+	.section-button{
+		margin-top:1%;
+		margin-left:1%;
+		width:7%;
+		height:10%;
+		float:right;
+		background-color:black;
+	}
+	
+	.book-use{
+		overflow:hidden;
+		width:90%;
+		left:3%;
+		transform:translateY(-600%);
+		position:absolute;
+		display:none;
+	}
+	
+	.book-use div{
+		float:left;
+		width:50%;
+	}
+	
+	.book-use div a{
+		font-size:1.5vw;
+		color:white;
+	    font-weight: bolder;
+	    background-color:black;
+	}
+	
+	.bdWrapper{
+		overflow:hidden;
+		width:70%;
+		left:30%;
+	}
+
+	.bookimg{
+		float:left;
+		width:30%;
+	}
+	
+	.bookinfo{
+		float:left;
+		width:70%;
+	}
+	
+	

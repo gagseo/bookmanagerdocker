@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="BOOK">
+  <select id="selectBookList" resultType="Book">
+    select info, title, bidx,  author, rentcnt, isrent, isbn 
+		from tb_book  
+		inner join tb_code on category = code 
+		where title like '%'|| #{title} ||'%'
+  </select>
+  
+  <select id="selectInnerBookSearchList" resultType="Book">
+    select info, title, bidx,  author, rentcnt, isrent, isbn 
+		from tb_book  
+		inner join tb_code on CATEGORY = code 
+  		where bidx in
+		<foreach collection="bnoList" item='bidx' index='i' open="(" close=")" separator=","> 
+		#{b_bno} 
+		</foreach> -->
+  		<if test="title != null">
+		<!-- like절 사용 방법 -->
+	 		and title like '%'|| #{title} ||'%'
+		</if>
+		<if test="author != null">
+			and author like '%'|| #{author} ||'%'
+		</if>
+		<if test="orderBy != null">
+			order by ${orderBy} desc
+		</if>
+  </select>
+  
+  <!-- resultMap을 사용해서 Map으로 담기 -->
+  <resultMap type="map" id="resultBook">
+  	<id column="code" property="code"/>
+  	<result column="info" property="info"/>
+  	<result column="title" property="title"/>
+  	<result column="bidx" property="bidx"/>
+  	<result column="author" property="author"/>
+  	<result column="rentcnt" property="rentcnt"/>
+  	<result column="isrent" property="isrent"/>
+  	<result column="isbn" property="isbn"/>
+  </resultMap>	
+  
+  <!-- resultMap="resultBook" -->
+  <select id="selectBook" resultType="Book">
+    select info, title, bidx,  author, rentcnt, isrent, isbn 
+		from tb_book  
+		inner join tb_code on category = code 
+		<!-- 변수명으로 쿼리문을 완성할 수 있다. -->
+		where bidx = #{b_bno}
+  </select>
+ 
+  
+</mapper>
+
+
